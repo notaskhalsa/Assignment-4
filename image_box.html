@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* .flex-container{
+            display: flex;
+            flex-direction: column;
+        } */
+        .abc{
+            height: 500px;
+            width: 500px;
+        }
+        #aa{
+            background-color: coral;
+            height: 250px;
+            width: 150px;
+            margin-block-end: 50vh;    
+        }
+        #bb{
+            background-color: midnightblue;
+            box-sizing: inherit;
+            height: 200px;
+            width: 350px;
+            margin-block-end: 50vh;
+        }
+        #cc{
+            background-color: salmon;
+            box-sizing: inherit;
+            height: 300px;
+            width: 50px;
+            margin-block-end: 50vh;
+        }
+        #dd{
+            background-color: steelblue;
+            box-sizing: inherit;
+            height: 150px;
+            width: 250px;
+            margin-block-end: 50vh;
+        }
+        #ee{
+            background-color: crimson;
+            box-sizing: inherit;
+            height: 300px;
+            width: 300px;
+            margin-block-end: 50vh;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="flex-container">
+        <div id="aa">
+            <img src="https://cdn.talentlms.com/crownstack/1615435374_im4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1Mzc0X2ltNC5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=XksHqXLxojaj8pNtQt90xSmOjkTkkXe5CugTdzeg7gp0wJLe-5uG0VfKFMNkH6ni4XDKyw7k-ey-AIdBP%2F1yZSyQk0MinHUzWn55%2F0Ep8dTbgTBndZe758s%2FqktS5g%2F-JB3Wq-971YpdYN3hRZ-XxA7zI0jW-sZmXiaF38U-VgaTfKHWE23KVctzAZOP-S7qRozVdL1aBWycGu483zu9k5s4OxuGInI9Mrfp2trk2xsHKL4BU1BhwPkhyzJF3SEpbEeodr%2FY5JxbO8FIHgxezVdzUZiLLMxpOaKZsJq30N3QixQwiFKA0smnox%2F0qTpsMEzZGbVJmTm5ekObY7q1Iw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+        </div>
+        <div id="bb">
+            <img src="https://cdn.talentlms.com/crownstack/1615435384_im3.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1Mzg0X2ltMy5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=nGmLlAY3tG4q9qev%2F%2FwPgsLKSlZ4Oh0rf3iqGaA5uSHcHcPcW7z5vbFWdgGBlCpjNVmMT-PlNixsj3rksJ-s66k9atZMTm8L7AVwtwi1cvGDPJsb2kM9ntE1Pf%2FnAaz%2FnIH6qiPnGKmBw6nD7Zh2BNiTurvsQHFHIsrRNmB1kDnY2g4tFWJX2JNOnHUWDYrJqRUwxEnncgoIwk3qbNfenJUQ1w6hRN0%2Fm5XYYQ0QMFbGQjOSH6A5A9OeoNqU8B2vPJ%2FxHSyki0uucCpMe4q0XcLO8WVJQvWhMv2Gtr-0dasbN6AzN6fyVM0Se4%2FwSR1mEfFDftxkJNCBpo9eBV8bSg__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+        </div>
+        <div id="cc">
+            <img src="https://cdn.talentlms.com/crownstack/1615435392_im2.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1MzkyX2ltMi5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=PBxD1uvnbCkZNMUxpXjvq%2FAcZ90SyGiNJE9QXBadnWPjCpZpve7Z6G7EvzKWSCmPG34Bh6KQw%2FE%2FatLQ%2F2xEkpreqOfDusQitUqR8deLoYsu1yOclIfpGWb14c0jdPVsKSNeY2AzItNYKsaqukiRYyWWnfS8O914BscgJFcUNOA3HyYEh0PsQsqcKt3jV0yagi00gE5T5xt5f9mUMt52ZuO4yxjxxSnawgYBwnTjKLWOv0wTIG00-Dpjnf-ZURlIkGGcQMg2yfr3lR3vsBwia%2Fi5eJgITBBARbPme6X9kBG2UAQFgsgFU6wOaLawweu%2FHEFieujh3ZIleTwa7Z6rjw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+        </div>  
+        <div id="dd">
+            <img src="https://cdn.talentlms.com/crownstack/1615435413_im1.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1NDEzX2ltMS5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=ELpzjuWOzDLESeH23wCZr2IukPD0v-UOQw3OJe3Uvsg63fPaxLWsG7svO%2FlyZs1DlJipMcnQdIWFkBXU9mF2Wg2UJlHtbVOWiKc4pFcnM%2F3OObKYDKPf%2Fzytlcgscl5pNcAmjQRDO1co5JvkNYzyosMQzolemzpHa-7yWtlnXy%2Fe6yPklWIYZQGGxQhu8M6KxFBc6HLv0iS98sL45YGdqyOd-kNy-fy-vjF8LyjQ9GL7qDb-BbDehWmIsvV246exwXuWbPyGFzP7W2445QaQpImPSP0hsqM-X%2Fo9%2FN0ge9fqdOrMJHoEEum6PZEOZEfoJd6N9mDKio9unySryXDxWw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+        </div>
+        <div id="ee">
+            <img src="https://cdn.talentlms.com/crownstack/1615435341_im5.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1MzQxX2ltNS5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=W4e5YF9u24yuPAVcfiKydKZej785uoCG%2FvsUAn%2F4O%2Ffvy21f54UDmIuBNFK-Yd2gP45nMG8HlPkLv3s7aVWeNnpc7gWoAzVqErkmvKXtbv0oPh35zKIDbLfUtE5YvYdeQ6fMvguz9ymOdUC65cZdX90ZQY9djhiSa6s-D0iqZoV8sADCykJ074nwDRqkBiwOe2lFKnvH-H8A17J8S9Gv6pZWsvPCJ8JeVZ9t1wXOHOEHLDm2FFKTBOTkudk4gsS2CUyeZ9qNHDcNp6dSxFWJg3eSuDJQg2c9jiTaYR7-tqMRcWFI7t7EpOJWQcXN8GHmzZgmCbKx4LHZ9tzSRGnziA__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+        </div>
+    </div> -->
+    <table class="abc">
+        <tr id="aa">
+            <td>
+                <img id="aa" src="https://cdn.talentlms.com/crownstack/1615435374_im4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1Mzc0X2ltNC5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=XksHqXLxojaj8pNtQt90xSmOjkTkkXe5CugTdzeg7gp0wJLe-5uG0VfKFMNkH6ni4XDKyw7k-ey-AIdBP%2F1yZSyQk0MinHUzWn55%2F0Ep8dTbgTBndZe758s%2FqktS5g%2F-JB3Wq-971YpdYN3hRZ-XxA7zI0jW-sZmXiaF38U-VgaTfKHWE23KVctzAZOP-S7qRozVdL1aBWycGu483zu9k5s4OxuGInI9Mrfp2trk2xsHKL4BU1BhwPkhyzJF3SEpbEeodr%2FY5JxbO8FIHgxezVdzUZiLLMxpOaKZsJq30N3QixQwiFKA0smnox%2F0qTpsMEzZGbVJmTm5ekObY7q1Iw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+            </td>
+        </tr>
+        <br>
+        <tr id="bb">
+            <td>
+                <img id="b" src="https://cdn.talentlms.com/crownstack/1615435384_im3.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1Mzg0X2ltMy5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=nGmLlAY3tG4q9qev%2F%2FwPgsLKSlZ4Oh0rf3iqGaA5uSHcHcPcW7z5vbFWdgGBlCpjNVmMT-PlNixsj3rksJ-s66k9atZMTm8L7AVwtwi1cvGDPJsb2kM9ntE1Pf%2FnAaz%2FnIH6qiPnGKmBw6nD7Zh2BNiTurvsQHFHIsrRNmB1kDnY2g4tFWJX2JNOnHUWDYrJqRUwxEnncgoIwk3qbNfenJUQ1w6hRN0%2Fm5XYYQ0QMFbGQjOSH6A5A9OeoNqU8B2vPJ%2FxHSyki0uucCpMe4q0XcLO8WVJQvWhMv2Gtr-0dasbN6AzN6fyVM0Se4%2FwSR1mEfFDftxkJNCBpo9eBV8bSg__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+            </td>
+        </tr>
+        <br>
+        <tr id="cc">
+            <td>
+                <img id="c1" src="https://cdn.talentlms.com/crownstack/1615435392_im2.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1MzkyX2ltMi5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=PBxD1uvnbCkZNMUxpXjvq%2FAcZ90SyGiNJE9QXBadnWPjCpZpve7Z6G7EvzKWSCmPG34Bh6KQw%2FE%2FatLQ%2F2xEkpreqOfDusQitUqR8deLoYsu1yOclIfpGWb14c0jdPVsKSNeY2AzItNYKsaqukiRYyWWnfS8O914BscgJFcUNOA3HyYEh0PsQsqcKt3jV0yagi00gE5T5xt5f9mUMt52ZuO4yxjxxSnawgYBwnTjKLWOv0wTIG00-Dpjnf-ZURlIkGGcQMg2yfr3lR3vsBwia%2Fi5eJgITBBARbPme6X9kBG2UAQFgsgFU6wOaLawweu%2FHEFieujh3ZIleTwa7Z6rjw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+            </td>
+        </tr>
+        <br>
+        <tr id="dd">
+            <td>
+                <img id="d1" src="https://cdn.talentlms.com/crownstack/1615435413_im1.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1NDEzX2ltMS5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=ELpzjuWOzDLESeH23wCZr2IukPD0v-UOQw3OJe3Uvsg63fPaxLWsG7svO%2FlyZs1DlJipMcnQdIWFkBXU9mF2Wg2UJlHtbVOWiKc4pFcnM%2F3OObKYDKPf%2Fzytlcgscl5pNcAmjQRDO1co5JvkNYzyosMQzolemzpHa-7yWtlnXy%2Fe6yPklWIYZQGGxQhu8M6KxFBc6HLv0iS98sL45YGdqyOd-kNy-fy-vjF8LyjQ9GL7qDb-BbDehWmIsvV246exwXuWbPyGFzP7W2445QaQpImPSP0hsqM-X%2Fo9%2FN0ge9fqdOrMJHoEEum6PZEOZEfoJd6N9mDKio9unySryXDxWw__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+            </td>
+        </tr>
+        <br>
+        <tr id="ee">
+            <td>
+            <img id="e1" src="https://cdn.talentlms.com/crownstack/1615435341_im5.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6XC9cL2Nkbi50YWxlbnRsbXMuY29tXC9jcm93bnN0YWNrXC8xNjE1NDM1MzQxX2ltNS5qcGciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MzI0NDE2MDB9fX1dfQ__&Signature=W4e5YF9u24yuPAVcfiKydKZej785uoCG%2FvsUAn%2F4O%2Ffvy21f54UDmIuBNFK-Yd2gP45nMG8HlPkLv3s7aVWeNnpc7gWoAzVqErkmvKXtbv0oPh35zKIDbLfUtE5YvYdeQ6fMvguz9ymOdUC65cZdX90ZQY9djhiSa6s-D0iqZoV8sADCykJ074nwDRqkBiwOe2lFKnvH-H8A17J8S9Gv6pZWsvPCJ8JeVZ9t1wXOHOEHLDm2FFKTBOTkudk4gsS2CUyeZ9qNHDcNp6dSxFWJg3eSuDJQg2c9jiTaYR7-tqMRcWFI7t7EpOJWQcXN8GHmzZgmCbKx4LHZ9tzSRGnziA__&Key-Pair-Id=APKAJDCWVQTW4P3KI3XA">
+            </td>
+        </tr>
+        <br>   
+    </table>
+    
+</body>
+</html>
